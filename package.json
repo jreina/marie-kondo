@@ -1,0 +1,19 @@
+{
+  "name": "marie-kondo",
+  "version": "1.0.0",
+  "description": "Tidy up your project!",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": ["konmari", "minify", "compress"],
+  "author": {
+    "name": "Johnny Reina",
+    "email": "johnny.r.reina@gmail.com",
+    "url": "http://johnnyreina.com"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "chance": "^1.0.18"
+  }
+}
