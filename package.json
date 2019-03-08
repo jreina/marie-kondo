@@ -16,6 +16,10 @@
     "email": "johnny.r.reina@gmail.com",
     "url": "http://johnnyreina.com"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jreina/marie-kondo"
+  },
   "license": "MIT",
   "dependencies": {
     "chance": "^1.0.18",
