@@ -22,6 +22,6 @@
     "commander": "^2.19.0"
   },
   "bin": {
-    "merriman": ".\\dist_server\\cli\\index.js"
+    "marie-kondo": ".\\bin\\marie-kondo.js"
   }
 }
