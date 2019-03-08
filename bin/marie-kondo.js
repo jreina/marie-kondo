@@ -11,8 +11,8 @@ program
   .option('-f, --fix', 'Tidy up')
   .option(
     '-p, --probability <n>',
-    'Probability that a given file will be discarded [0.5]',
-    0.5,
+    'Probability that a given file will be discarded [0.05]',
+    0.05,
     parseFloat
   )
   .action(dir => {

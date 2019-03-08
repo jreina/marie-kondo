@@ -6,7 +6,7 @@ const chance = require('chance').Chance(Math.random);
  * @param {Array<string>} files
  * @param {number} probability A number between 0 and 1 describing how likely a given file is to be marked.
  */
-function mark(files, probability = 0.5) {
+function mark(files, probability = 0.05) {
   const filesToRemove = Math.floor(files.length * probability);
   return chance.pickset(files, filesToRemove);
 }

@@ -10,15 +10,17 @@ const { calcSavings } = require('./util');
  * @param {number} probability 
  * @param {boolean} dry 
  */
-function tidyUp(path, probability = 0.5, dry = true) {
+function tidyUp(path, probability = 0.05, dry = true) {
   const files = crawl(path);
-  const discards = mark(files);
+  const discards = mark(files, probability);
+  const savings = calcSavings(discards);
+  const savePhrase = dry ? 'would have ' : '';
 
   console.log(
-    `The following ${files.length} files have failed to spark joy and must go`
+    `The following ${discards.length} files have failed to spark joy and must go`
   );
-  console.log(`This action will reclaim ${calcSavings(files)} bytes:\r\n\r\n`);
   console.log(discards.join('\r\n'));
+  console.log(`This action ${savePhrase}reclaimed ${savings} bytes over ${discards.length} files!`);
 
   if (!dry) sweep(discards);
 }
