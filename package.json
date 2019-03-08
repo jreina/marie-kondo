@@ -6,7 +6,11 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": ["konmari", "minify", "compress"],
+  "keywords": [
+    "konmari",
+    "minify",
+    "compress"
+  ],
   "author": {
     "name": "Johnny Reina",
     "email": "johnny.r.reina@gmail.com",
@@ -14,6 +18,10 @@
   },
   "license": "MIT",
   "dependencies": {
-    "chance": "^1.0.18"
+    "chance": "^1.0.18",
+    "commander": "^2.19.0"
+  },
+  "bin": {
+    "merriman": ".\\dist_server\\cli\\index.js"
   }
 }
