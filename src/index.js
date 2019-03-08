@@ -3,7 +3,14 @@ const mark = require('./mark');
 const sweep = require('./sweep');
 const { calcSavings } = require('./util');
 
-function tidyUp(path, probability = 0.5) {
+/**
+ * Recursively tidy up a directory.
+ * 
+ * @param {string} path 
+ * @param {number} probability 
+ * @param {boolean} dry 
+ */
+function tidyUp(path, probability = 0.5, dry = true) {
   const files = crawl(path);
   const discards = mark(files);
 
@@ -13,7 +20,7 @@ function tidyUp(path, probability = 0.5) {
   console.log(`This action will reclaim ${calcSavings(files)} bytes:\r\n\r\n`);
   console.log(discards.join('\r\n'));
 
-  sweep(discards);
+  if (!dry) sweep(discards);
 }
 
 module.exports = tidyUp;
